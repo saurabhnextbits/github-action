@@ -179,7 +179,7 @@
 
         let config = {
           method: 'post',
-          url: `${process.env.DIRECTUS_URL}/graphql/system`,
+          url: `https://5mee2e5z.directus.app/graphql/system`,
           headers: { 
             'Authorization': `Bearer ${token}`, 
             'Content-Type': 'application/json'

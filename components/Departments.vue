@@ -181,7 +181,7 @@
 
         let config = {
           method: 'post',
-          url: `${process.env.DIRECTUS_URL}/graphql`,
+          url: `https://5mee2e5z.directus.app/graphql`,
           headers: { 
             'Authorization': `Bearer ${token}`, 
             'Content-Type': 'application/json'
@@ -225,7 +225,7 @@
 
           let config = {
             method: 'post',
-            url: `${process.env.DIRECTUS_URL}/graphql`,
+            url: `https://5mee2e5z.directus.app/graphql`,
             headers: { 
               'Authorization': `Bearer ${token}`, 
               'Content-Type': 'application/json'
@@ -269,7 +269,7 @@
 
           let config = {
             method: 'post',
-            url: `${process.env.DIRECTUS_URL}/graphql`,
+            url: `https://5mee2e5z.directus.app/graphql`,
             headers: { 
               'Authorization': `Bearer ${token}`, 
               'Content-Type': 'application/json'
@@ -318,7 +318,7 @@
 
         let config = {
           method: 'post',
-          url: `${process.env.DIRECTUS_URL}/graphql`,
+          url: `https://5mee2e5z.directus.app/graphql`,
           headers: { 
             'Authorization': `Bearer ${token}`, 
             'Content-Type': 'application/json'
