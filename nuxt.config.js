@@ -1,5 +1,5 @@
 import colors from 'vuetify/es5/util/colors'
-// console.log(process.env)
+
 
 export default {
   // Target: https://go.nuxtjs.dev/config-target
@@ -46,7 +46,6 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    '@nuxtjs/dotenv',
   '@nuxtclub/supabase',
   '@pnodev/nuxt-directus',
   'cookie-universal-nuxt',

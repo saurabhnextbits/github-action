@@ -10,7 +10,6 @@
     "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "dependencies": {
-    "@nuxtjs/dotenv": "^1.4.1",
     "@pnodev/nuxt-directus": "^0.2.0",
     "axios": "^0.27.2",
     "cookie-universal-nuxt": "^2.2.2",
