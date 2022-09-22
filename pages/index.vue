@@ -491,7 +491,7 @@ export default {
       department:'',
       hours:'',
       notes:'',
-      status:'active'
+      status:'published'
     },
     date: (new Date(Date.now() - (new Date()).getTimezoneOffset() * 60000)).toISOString().substr(0, 10),
     menu: false,
@@ -760,7 +760,6 @@ export default {
         this.task.userId = this.$auth.user.id;
         this.task.date = String(new Date((new Date(this.date).getTime()) + (new Date(this.date).getTimezoneOffset()) * 60000).toLocaleDateString('en-us', { weekday:"long", year:"numeric", month:"short", day:"numeric"}));
         this.task.dateTime = parseFloat(new Date((new Date(this.date).getTime()) + (new Date(this.date).getTimezoneOffset()) * 60000).getTime());
-        this.status = "published";
         
         // console.log(this.task);
 
