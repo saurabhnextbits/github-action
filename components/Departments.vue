@@ -211,11 +211,12 @@
       save() {
         if (this.$refs.form.validate()) {
           let that = this;
+          this.editedItem.id = Date.now() + parseInt(Math.random()*100);
           
           let token = this.$cookies.get('directus_access_token')
           let data = JSON.stringify({
             query: `mutation {
-              create_department_item(data:{dname:"${this.editedItem.dname}",status:"active"}) {
+              create_department_item(data:{id:"${this.editedItem.id}",dname:"${this.editedItem.dname}",status:"published"}) {
                 id
                 dname
               }
@@ -259,7 +260,7 @@
           let token = this.$cookies.get('directus_access_token')
           let data = JSON.stringify({
             query: `mutation {
-              update_department_item(id:"${this.editedItem.id}",data:{dname:"${this.editedItem.dname}",status:"active"}) {
+              update_department_item(id:"${this.editedItem.id}",data:{id:"${this.editedItem.id}",dname:"${this.editedItem.dname}",status:"active"}) {
                 id
                 dname
               }

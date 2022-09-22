@@ -483,7 +483,7 @@ export default {
     dateShow : new Date().toLocaleDateString('en-us', { weekday:"long", year:"numeric", month:"short", day:"numeric"}),
     calendarShow : false,
     task: {
-      // id:'',
+      id: Date.now() + parseInt(Math.random()*100),
       userId:'',
       date: new Date(),
       dateTime: new Date().getTime(),
@@ -756,7 +756,7 @@ export default {
     dialogSubmit(){
       let that = this
       if (this.$refs.form.validate()) {
-        // this.task.id = uuidv4();
+        this.task.id = Date.now() + parseInt(Math.random()*100);
         this.task.userId = this.$auth.user.id;
         this.task.date = String(new Date((new Date(this.date).getTime()) + (new Date(this.date).getTimezoneOffset()) * 60000).toLocaleDateString('en-us', { weekday:"long", year:"numeric", month:"short", day:"numeric"}));
         this.task.dateTime = parseFloat(new Date((new Date(this.date).getTime()) + (new Date(this.date).getTimezoneOffset()) * 60000).getTime());
@@ -767,6 +767,7 @@ export default {
         let data = JSON.stringify({
         query: `mutation {
           create_timesheet_item(data: {
+            id: "${this.task.id}",
             date: "${this.task.date}",
             dateTime: ${this.task.dateTime},
             project: "${this.task.project}",
@@ -853,6 +854,7 @@ export default {
         let data = JSON.stringify({
         query: `mutation {
           update_timesheet_item(id:"${this.task.id}" ,data: {
+            id:"${this.task.id}"
             date: "${this.task.date}",
             dateTime: ${this.task.dateTime},
             project: "${this.task.project}",
