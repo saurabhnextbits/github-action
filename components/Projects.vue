@@ -225,7 +225,7 @@
           let token = this.$cookies.get('directus_access_token')
           let data = JSON.stringify({
             query: `mutation {
-              create_project_item (data:{id:"${this.editedItem.id}",pname:"${this.editedItem.pname}",pcode:"${this.editedItem.pcode}",status:"active"}) {
+              create_project_item (data:{id:"${this.editedItem.id}",pname:"${this.editedItem.pname}",pcode:"${this.editedItem.pcode}",status:"published"}) {
                 id
                 pcode
                 pname
@@ -282,7 +282,7 @@
           let token = this.$cookies.get('directus_access_token')
           let data = JSON.stringify({
             query: `mutation {
-              update_project_item (id:${this.editedItem.id},data:{id:${this.editedItem.id},pname:"${this.editedItem.pname}",pcode:"${this.editedItem.pcode}",status:"active"}) {
+              update_project_item (id:${this.editedItem.id},data:{id:${this.editedItem.id},pname:"${this.editedItem.pname}",pcode:"${this.editedItem.pcode}",status:"published"}) {
                 id
                 pcode
                 pname

@@ -760,7 +760,7 @@ export default {
         this.task.userId = this.$auth.user.id;
         this.task.date = String(new Date((new Date(this.date).getTime()) + (new Date(this.date).getTimezoneOffset()) * 60000).toLocaleDateString('en-us', { weekday:"long", year:"numeric", month:"short", day:"numeric"}));
         this.task.dateTime = parseFloat(new Date((new Date(this.date).getTime()) + (new Date(this.date).getTimezoneOffset()) * 60000).getTime());
-        this.status = "active";
+        this.status = "published";
         
         // console.log(this.task);
 

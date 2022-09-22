@@ -260,7 +260,7 @@
           let token = this.$cookies.get('directus_access_token')
           let data = JSON.stringify({
             query: `mutation {
-              update_department_item(id:"${this.editedItem.id}",data:{id:"${this.editedItem.id}",dname:"${this.editedItem.dname}",status:"active"}) {
+              update_department_item(id:"${this.editedItem.id}",data:{id:"${this.editedItem.id}",dname:"${this.editedItem.dname}",status:"published"}) {
                 id
                 dname
               }
