@@ -6,7 +6,7 @@
                      <v-card-title>
                         <v-layout align-center justify-space-between>
                            <h1 class="text-h6 text-sm-h5 font-weight-regular">
-                             Sign In   {{process.env.TEST}}
+                             Sign In
                            </h1>
                             <img src="/nextbits-full.svg" height="35px" alt="" class="logo-lg">
                         </v-layout>
