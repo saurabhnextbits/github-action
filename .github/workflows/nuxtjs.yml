@@ -28,9 +28,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Hello world action
-        env: # Or as an environment variable
-          super_secret: ${{ secrets.TEST }}
       - name: Checkout
         uses: actions/checkout@v3
       - name: Detect package manager
